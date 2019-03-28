@@ -1,0 +1,14 @@
+.body {
+  background-color: aliceblue;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  flex-wrap: wrap;
+}
+
+.item {
+  padding: 20px;
+}
