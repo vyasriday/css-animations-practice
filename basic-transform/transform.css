@@ -1,0 +1,22 @@
+.wrapper {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+} 
+
+.box {
+  height: 100px;
+  width: 100px;
+  background: pink; 
+  box-shadow: 0 3px 5px 8px lightblue;  
+  transform: translateX(100px) translateY(45px) translateZ(200px);
+  transition: all 700ms ease-out 0.2s;
+}
+
+.box:hover {
+  background: orangered;
+  box-shadow: none;  
+  transform:  rotateX(-25deg);
+}

@@ -1,0 +1,71 @@
+body {
+  /* max-width: 1140px; */
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  overflow: hidden;
+  background: whitesmoke;
+}
+.wrapper {
+  padding-top: 100px;
+  position: relative;
+  animation: moveMan 6s ease-in infinite;
+  overflow: hidden;
+  perspective: 1000px;
+  z-index: 10;
+}
+
+.face {
+  height: 125px;
+  width: 125px;
+  background-color: darkred; 
+  border-radius: 30% 20% 50% 30%;
+  box-shadow: 0px 4px 7px 3px lightgrey;
+  transform: rotateY(25deg);
+}
+
+.body {
+  width: 120px;
+    height: 170px;
+    background-color: sandybrown;
+    border-radius: 20% 10% 10% 20%;
+    box-shadow: 0px 4px 7px 3px lightgrey;
+    transform: rotateY(25deg);
+}
+
+.legs {
+  height: 100px;
+  width: 30px;
+  background: darkslateblue;
+  display: inline-block;
+  margin-left: 18px;
+  box-shadow: 0px 4px 7px 3px lightgrey;
+  transform: rotateY(25deg);
+}
+
+.road {
+  width: 100%;
+  height: 20px;
+  background: #000000bd;
+  box-shadow: 0px 4px 7px 3px darkgrey;
+  transform: rotateX(5deg) rotateY(5deg) rotateZ(1deg);
+  z-index: -1;
+  margin-top: 2px;
+
+}
+
+@keyframes moveMan {
+  from {
+    transform: translateX(0) rotateX(2deg) rotateY(3deg) rotateZ(1deg);
+    transform-style: preserve-3d; 
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  to {
+    transform: translateX(100%) rotateX(-8deg) rotateY(-15deg) rotateZ(-5deg) scale(1.1);
+    transform-style: preserve-3d;
+    padding-bottom: 20px;
+    margin-bottom: 6px;
+    
+  }
+}
