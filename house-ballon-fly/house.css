@@ -1,0 +1,149 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: lightskyblue;
+}
+
+.house {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 10px;
+  outline: none;
+  animation: fly 5s ease-in-out infinite 1000ms;
+
+}
+
+.house-terrace {
+  display: flex;
+}
+
+.terrace-triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 150px solid #53c397fa;
+  outline: none;
+}
+
+.terrace-horizontal {
+  width: 300px;
+  height: 150px;
+  background: rgb(63, 251, 243);
+  background: linear-gradient(90deg, rgba(63, 251, 243, 1) 1%, rgba(252, 70, 107, 1) 100%);
+  z-index: -1;
+  transform: translateX(-100px);
+  outline: none;
+  border: none;
+}
+
+.house-chimney {
+  border-radius: 5% 5% 0% 0%;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  right: 100px;
+  top: -48px;
+  z-index: 100;
+  background: rgb(230, 156, 227);
+  background: linear-gradient(90deg, rgb(118, 79, 116) 3%, rgb(233, 214, 148) 100%);
+  outline: none;
+}
+
+.house-body {
+  position: relative;
+  height: 200px;
+  width: 400px;
+  background: rgb(63, 251, 88);
+  background: linear-gradient(90deg, rgba(63, 251, 88, 1) 2%, rgba(252, 70, 107, 1) 100%);
+  outline: none;
+  border: none;
+}
+
+.house-body-gate {
+  width: 80px;
+  height: 120px;
+  background: #a52a2ad6;
+  position: absolute;
+  left: 50px;
+  bottom: 0;
+  border-radius: 10% 10% 0 0;
+  box-shadow: 3px 0px 1px 1px #00000066;
+  outline: none;
+
+
+}
+
+.house-body-window {
+  width: 70px;
+  height: 70px;
+  background: #2c2c30a8;
+  position: absolute;
+  right: 60px;
+  top: 30px;
+  border-radius: 15%;
+  box-shadow: 5px -2px 6px 0px #00000066;
+  outline: none;
+}
+
+
+.ballons {
+  display: flex;
+  position: absolute;
+  top: 80px;
+  z-index: -5;
+  animation: fly 5s ease-in-out infinite 500ms;
+}
+
+.ballon {
+  display: block;
+  width: 70px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 20px;
+}
+
+#ballon-1:after,
+#ballon-2:after {
+  width: 2px;
+  height: 120px;
+  content: "|";
+  background: #3a3737;
+  position: absolute;
+}
+
+#ballon-1:after {
+  top: 80px;
+  right: 166px;
+
+}
+
+#ballon-2:after {
+
+  top: 80px;
+  right: 54px;
+}
+
+@keyframes fly {
+
+  0%,
+  25% {
+    transform: translateY(-100px);
+  }
+
+  25%,
+  50% {
+    transform: translateY(-200px);
+  }
+
+  50%, 75% {
+    transform: translateY(-300px);
+  }
+
+  75%, 100% {
+    transform: translateY(-400px);
+  }
+}
