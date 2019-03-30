@@ -4,6 +4,7 @@ body {
   flex-direction: column;
   align-items: center;
   background: lightskyblue;
+  /* max-height: 100vh; */
 }
 
 .house {
@@ -95,7 +96,7 @@ body {
   position: absolute;
   top: 80px;
   z-index: -5;
-  animation: fly 5s ease-in-out infinite 500ms;
+  animation: fly 5s ease-in-out infinite 1000ms;
 }
 
 .ballon {
@@ -109,7 +110,7 @@ body {
 #ballon-1:after,
 #ballon-2:after {
   width: 2px;
-  height: 120px;
+  height: 150px;
   content: "|";
   background: #3a3737;
   position: absolute;
@@ -145,5 +146,31 @@ body {
 
   75%, 100% {
     transform: translateY(-400px);
+  }
+}
+
+@media(max-width: 400px) {
+  .terrace-triangle {
+    border-bottom: 100px solid #53c397fa;
+  }
+  .terrace-horizontal {
+    height: 100px;
+    width: 200px;
+  }
+  .house {
+    padding-left: 100px;
+  }
+  .house-body {
+    width: 300px;
+  }
+
+  #ballon-1 {
+    margin: 0 8px;
+  }
+  #ballon-1:after, #ballon-2:after {
+    height: 200px;
+  }
+  #ballon-1:after {
+    right: 155px;
   }
 }
