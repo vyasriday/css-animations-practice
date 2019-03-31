@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   outline: none;
   animation: fly 5s ease-in-out infinite 1000ms;
 
@@ -110,7 +110,7 @@ body {
 #ballon-1:after,
 #ballon-2:after {
   width: 2px;
-  height: 150px;
+  height: 250px;
   content: "|";
   background: #3a3737;
   position: absolute;
@@ -130,22 +130,21 @@ body {
 
 @keyframes fly {
 
-  0%,
-  25% {
-    transform: translateY(-100px);
+  0%{
+    transform: translateY(-10px);
   }
 
   25%,
   50% {
-    transform: translateY(-200px);
+    transform: translateY(-150px);
   }
 
   50%, 75% {
-    transform: translateY(-300px);
+    transform: translateY(-250px);
   }
 
   75%, 100% {
-    transform: translateY(-400px);
+    transform: translateY(-600px);
   }
 }
 
