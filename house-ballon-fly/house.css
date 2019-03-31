@@ -3,15 +3,14 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: lightskyblue;
-  /* max-height: 100vh; */
+  background: #bdcca6;
 }
 
 .house {
   display: flex;
   flex-direction: column;
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   outline: none;
   animation: fly 5s ease-in-out infinite 1000ms;
 
@@ -26,13 +25,13 @@ body {
   height: 0;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
-  border-bottom: 150px solid #53c397fa;
+  border-bottom: 100px solid #53c397fa;
   outline: none;
 }
 
 .terrace-horizontal {
   width: 300px;
-  height: 150px;
+  height: 100px;
   background: rgb(63, 251, 243);
   background: linear-gradient(90deg, rgba(63, 251, 243, 1) 1%, rgba(252, 70, 107, 1) 100%);
   z-index: -1;
@@ -56,7 +55,7 @@ body {
 
 .house-body {
   position: relative;
-  height: 200px;
+  height: 150px;
   width: 400px;
   background: rgb(63, 251, 88);
   background: linear-gradient(90deg, rgba(63, 251, 88, 1) 2%, rgba(252, 70, 107, 1) 100%);
@@ -94,7 +93,7 @@ body {
 .ballons {
   display: flex;
   position: absolute;
-  top: 80px;
+  bottom: 400px;
   z-index: -5;
   animation: fly 5s ease-in-out infinite 1000ms;
 }
@@ -107,12 +106,19 @@ body {
   margin: 0 20px;
 }
 
+#ballon-1 {
+  background: linear-gradient(90deg, rgb(118, 79, 116) 3%, rgb(233, 214, 148) 100%);
+}
+#ballon-2 {
+  background: linear-gradient(90deg, rgba(63, 251, 88, 1) 2%, rgba(252, 70, 107, 1) 100%);
+}
+
 #ballon-1:after,
 #ballon-2:after {
-  width: 2px;
-  height: 250px;
+  width: 3px;
+  height: 150px;
   content: "|";
-  background: #3a3737;
+  background: darkslategray;
   position: absolute;
 }
 
@@ -148,28 +154,4 @@ body {
   }
 }
 
-@media(max-width: 400px) {
-  .terrace-triangle {
-    border-bottom: 100px solid #53c397fa;
-  }
-  .terrace-horizontal {
-    height: 100px;
-    width: 200px;
-  }
-  .house {
-    padding-left: 100px;
-  }
-  .house-body {
-    width: 300px;
-  }
 
-  #ballon-1 {
-    margin: 0 8px;
-  }
-  #ballon-1:after, #ballon-2:after {
-    height: 200px;
-  }
-  #ballon-1:after {
-    right: 155px;
-  }
-}
